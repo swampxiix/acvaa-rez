@@ -5,16 +5,17 @@ $(document).ready(function() {
 
 $('.menu_section .menu_head').each(function() {
     var section_id = $(this).parents("div").attr('id');
+    var section_glyph = "#" + section_id + "_glyph";
     if ( $.cookie(section_id)=='show' ) {
-        $(this).removeClass("mh_collapsed").addClass("mh_expanded");
+        $(section_glyph).removeClass("fa-plus-square").addClass("fa-minus-square");
         $(this).next().show();
         }
     else if ( $.cookie(section_id)=='hide' ) {
-        $(this).removeClass("mh_expanded").addClass("mh_collapsed");
+        $(section_glyph).removeClass("fa-minus-square").addClass("fa-plus-square");
         $(this).next().hide();
         }
     else {
-        $(this).removeClass("mh_collapsed").addClass("mh_expanded");
+        $(section_glyph).removeClass("fa-plus-square").addClass("fa-minus-square");
         $(this).next().show();
         };
     });
@@ -28,16 +29,17 @@ $("#pfizerarticle").hide();
 
 $('.menu_section .menu_head').click(function() {
     var section_id = $(this).parents("div").attr('id');
-    if ($(this).hasClass("mh_expanded")) {
-        $(this).removeClass("mh_expanded").addClass("mh_collapsed");
+    var section_glyph = "#" + section_id + "_glyph";
+    if ($(section_glyph).hasClass("fa-minus-square")) {
+        $(section_glyph).removeClass("fa-minus-square").addClass("fa-plus-square");
         $.cookie(section_id, "hide", { expires: 3650 });
         }
-    else if ($(this).hasClass("mh_collapsed")) {
-        $(this).removeClass("mh_collapsed").addClass("mh_expanded");
+    else if ($(section_glyph).hasClass("fa-plus-square")) {
+        $(section_glyph).removeClass("fa-plus-square").addClass("fa-minus-square");
         $.cookie(section_id, "show", { expires: 3650 });
         }
     else {
-        $(this).removeClass("mh_collapsed").addClass("mh_expanded");
+        $(section_glyph).removeClass("fa-plus-square").addClass("fa-minus-square");
         $.cookie(section_id, "show", { expires: 3650 });
         }
     $(this).next().toggle('fast');

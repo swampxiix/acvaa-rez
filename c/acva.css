@@ -11,7 +11,10 @@ html {
     }
 
 body {
-    background: url(/g/bg_grad.gif) left top #f0f1f3 repeat-x;
+/*    background-image: url("/g/bg_grad.gif"); */
+    background-color: #f0f1f3;
+    background-repeat: repeat-x;
+    background-position: left top;
     }
 
 a           { color: #F60; text-decoration: underline; }
@@ -83,7 +86,6 @@ a:active    { color: #326180; }
 /* ###################################################### */
 
 .menu_section {
-    width: 160px;
     }
 
 .menu_head {
@@ -93,27 +95,35 @@ a:active    { color: #326180; }
     font-weight: bold;
     }
 
-.mh_expanded {
-    background: url(/g/arrow_sprite.png) right center no-repeat;
-    background-position: 145px 0px;
+/*.mh_expanded {
+    background-image: url("/g/arrow_sprite.png");
+    background-repeat: no-repeat;
+    background-position: right top;
     }
 
 .mh_collapsed {
-    background: url(/g/arrow_sprite.png) right center no-repeat;
-    background-position: 145px -29px;
+    background-image: url("/g/arrow_sprite.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-position-y: -29px;
     margin-bottom: 5px;
     }
-
+*/
 .menu_links {
     color: #9dacb6;
-    font-size: 10pt;
+    font-size: 11pt;
     padding: 5px;
     }
 
 .menu_link {
     display: block;
-    width: 150px;
+    padding-left: 13px;
     margin-bottom: 5px;
+    }
+
+.ml_level2 {
+    font-size: 10pt;
+    padding-left: 21px;
     }
 
 a.mlm {
@@ -121,6 +131,7 @@ a.mlm {
     font-size: 12pt;
     font-weight: bold;
     margin-bottom: 10px;
+    text-decoration: none;
     }
 
 

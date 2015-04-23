@@ -1,0 +1,81 @@
+body {
+    font-size: 12pt;
+    }
+
+#header {
+    background-color: #c4ccd5;
+    }
+
+#subhead-wrapper {
+    border-bottom: 3px solid #354251;
+    padding: 0px;
+    }
+#subheader {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #FF6600;
+    color: #354251;
+    padding: 4px;
+    }
+    #subheader a {
+        text-decoration: none;
+        color: #354251;
+        }
+    #subheader #social-media {
+        font-size: 18pt;
+        font-weight: bold;
+        }
+        #subheader #social-media a {
+            padding-left: 30px;
+            }
+
+#account-header {
+    text-align: right;
+    font-size: 11pt;
+    }
+
+#body-container {
+    background-color: #FFFFFF;
+    }
+
+#side-menu {
+    font-size: 12pt;
+    padding: 0px;
+    }
+
+.menu-category {
+    color: #354251;
+    font-weight: bold;
+    margin-top: 10px;
+    }
+    .menu-category a {
+        text-decoration: none;
+        color: #354251;
+        }
+    .menu-category i {
+        color: #CCCCCC;        
+        }
+
+i.menu_glyph {
+    font-size: 10pt;
+    color: #9dacb6; /* override */
+    padding-left: 5px;
+    }
+
+#main-content {
+    padding-bottom: 30px;
+    }
+
+#footer {
+    padding: 0px 15px 10px 15px;
+    }
+    #footer .legal {
+        font-size: 10pt;
+        }
+
+.btn-orange {
+    color: #FFFFFF;
+    background-color: #FF6600;
+    border-color: #FF6600;
+    }
+
+
