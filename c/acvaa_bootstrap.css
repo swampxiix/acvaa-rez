@@ -72,10 +72,27 @@ i.menu_glyph {
         font-size: 10pt;
         }
 
+a.btn-primary,
+a.btn-success,
+a.btn-info,
+a.btn-warning,
+a.btn-danger {
+    color: #FFFFFF;
+    }
+
 .btn-orange {
     color: #FFFFFF;
     background-color: #FF6600;
     border-color: #FF6600;
+    }
+
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+    color: #FFFFFF;
+    background-color: #647382;
+    border: 1px solid #4d5b69;
     }
 
 

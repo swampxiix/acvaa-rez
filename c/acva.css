@@ -137,10 +137,10 @@ a.mlm {
 
 /* ###################################################### */
 
-textarea:focus, input:focus, select:focus {
+/*textarea:focus, input:focus, select:focus {
     border: 1px solid #F60;
     }
-
+*/
 #contact_info td {
     padding-right: 10px;
     padding-bottom: 6px;
@@ -149,10 +149,11 @@ textarea:focus, input:focus, select:focus {
 #contact_info {
     }
 
-.input {
+/*.input {
     border: 1px solid #AAA;
     padding: 2px;
     }
+*/
 
 .req {
     color: #F00;
