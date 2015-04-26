@@ -62,6 +62,13 @@ $("#news2010hide").click(function() {
     $("#news2010show").show();
     });
 
+$('#honorary').click(function () {
+    $("#conferred_input").toggle(this.checked);
+});
+
+$('#memoriam').click(function () {
+    $(".memoriam_input").toggle(this.checked);
+});
 
 
 
