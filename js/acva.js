@@ -27,6 +27,17 @@ $("#pfizerarticle").hide();
 // ######################################################
 // CLICK EVENTS
 
+$("#show-mobile-menu").click(function() {
+    if ($("#side-menu").css("display")==="block") {
+        $("#side-menu").css("display", "none");
+        $("#show-mobile-menu").html("Show Menu");
+
+    } else {
+        $("#side-menu").css("display", "block");
+        $("#show-mobile-menu").html("Hide Menu");
+    }
+});
+
 $('.menu_section .menu_head').click(function() {
     var section_id = $(this).parents("div").attr('id');
     var section_glyph = "#" + section_id + "_glyph";

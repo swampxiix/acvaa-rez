@@ -1,3 +1,64 @@
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+    #side-menu {
+        display: block;
+        }
+    #mobile-side-menu {
+        display: none;
+        }
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    #side-menu {
+        display: block;
+        }
+    #mobile-side-menu {
+        display: none;
+        }
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    #side-menu {
+        display: none;
+        }
+    #mobile-side-menu {
+        display: block;
+        }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+    #side-menu {
+        display: none;
+        }
+    #mobile-side-menu {
+        display: block;
+        }
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+    #side-menu {
+        display: none;
+        }
+    #mobile-side-menu {
+        display: block;
+        }
+
+}
+
+
 body {
     font-size: 12pt;
     }
@@ -80,11 +141,16 @@ a.btn-danger {
     color: #FFFFFF;
     }
 
-.btn-orange {
+.btn-orange,
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active,
+.btn-orange.active {
     color: #FFFFFF;
     background-color: #FF6600;
     border-color: #FF6600;
-    }
+}
+
 
 
 .nav-pills>li.active>a,
