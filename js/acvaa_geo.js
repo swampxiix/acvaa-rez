@@ -12,20 +12,23 @@ function populate_pulldown (pullhtml) {
     $("#state_slot").html(pullhtml);
 };
 
-function construct_pulldown (state_order, state_dict) {
+function construct_pulldown (state_order, state_dict, selected='') {
     var pullhtml = '<select name="state" class="input" id="state">';
     var i;
     for (i = 0; i < state_order.length; i++) {
         var state_name = state_order[i];
         var state_abbr = state_dict[state_name];
-        pullhtml += '<option value="' + state_abbr + '">';
-        pullhtml += state_name + '</option>';
+        pullhtml += '<option value="' + state_abbr + '"';
+        if (state_abbr == selected) {
+            pullhtml += ' SELECTED'
+        };
+        pullhtml += '>' + state_name + '</option>';
     };
     pullhtml += '</select>';
     populate_pulldown(pullhtml);
 };
 
-function get_states (country) {
+function get_states (country, selected='') {
     $.ajax( {
         url: 'ajax_get_states',
         data: 'country=' + country,
@@ -38,7 +41,7 @@ function get_states (country) {
             var state_order = d.order;
             var state_dict = d.dict;
             if (state_dict) {
-                construct_pulldown(state_order, state_dict);
+                construct_pulldown(state_order, state_dict, selected);
             }
             else {
                 insert_input();
@@ -50,18 +53,6 @@ function get_states (country) {
 $("select#countryselect").change(function () {
     get_states( $("select#countryselect option:selected").text() );
 });
-
-function alter_pulldowns_for_me (mycountry, mystate) {
-    console.log(mycountry);
-    console.log(mystate);
-    get_states(mycountry);
-    $("select#countryselect").val(mycountry);
-    $("select#state > option").each(function() {
-        console.log(this.text + ' ' + this.value);
-    });
-
-
-};
 
 function get_my_country_and_state () {
     var username = $.cookie('username');
@@ -75,17 +66,14 @@ function get_my_country_and_state () {
         },
         success: function(d, s, x) {
             var mycountry = d.country;
+            $("select#countryselect").val(mycountry);
             var mystate = d.state;
-            alter_pulldowns_for_me(mycountry, mystate);
+            get_states(mycountry, mystate);
         }
     });
 };
 
-
-// ON PAGE LOAD
-//get_states("USA");
 get_my_country_and_state();
-
 
 //------------------------------------------------------------------------------
 });
